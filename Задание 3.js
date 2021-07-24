@@ -1,8 +1,55 @@
+//HTML код
+
 /*<input type="text" class="input area">
 
     <button class="btn j-btn-request">Запрашиваем данные</button>
 
 <div class="result j-result">Здесь будет результат запроса</div>*/
+
+//CSS код
+
+/*.result {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+}
+
+.card {
+    width: 200px;
+    margin: 20px;
+}
+
+.card-image {
+    display: block;
+    width: 200px;
+    height: 150px;
+}
+
+.btn {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    box-shadow: none;
+    cursor: pointer;
+
+    margin: 5px 10px;
+    padding: 10px 15px;
+    border-radius: 1px;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: white;
+    background: #315efb;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    box-shadow: 0px 2px 8px 2px rgba(141,150,178,.3);
+    transform: scale(1.05);
+}*/
+
 /**
  * Функция-обертка над XMLHttpRequest, осуществляющая запрос
  * url - урл, по которому будет осуществляться запрос
@@ -51,8 +98,6 @@ function displayResult(apiData, number) {
         <p>${apiData[number - 1].author}</p>
       </div>
     `;
-
-
     resultNode.innerHTML = cardBlock;
 }
 
