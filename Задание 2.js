@@ -13,23 +13,25 @@ const jsonString = `{
     ]
 }`
 const data = JSON.parse(jsonString);
-const list = []
+// Всё сделано верно, но реализация может быть гораздо проще :) JSON.parse сразу преобразует JSON-строку в валидный JS-объект.
+
+// const list = []
 
 /*console.log(data.list[0].name)*/
 
-data.list.forEach(person => {
-    const name = person.name;
-    const age = person.age;
-    const prof = person.prof;
-    list.push({
-        name: name,
-        age: age,
-        prof: prof
-    })
-})
+// data.list.forEach(person => {
+//     const name = person.name;
+//     const age = person.age;
+//     const prof = person.prof;
+//     list.push({
+//         name: name,
+//         age: age,
+//         prof: prof
+//     })
+// })
 
-const result = {list: list}
+// const result = {list: list}
 
-console.log(result)
+console.log(data)
 
 

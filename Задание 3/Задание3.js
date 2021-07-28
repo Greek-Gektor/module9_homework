@@ -26,18 +26,18 @@ const resultNode = document.querySelector('.j-result');
 const btnNode = document.querySelector('.j-btn-request');
 
 
-function displayResult(apiData, number) {
-    number = document.querySelector('input').value;
-    const cardBlock = `
-      <div class="card">
-        <img
-          src="${apiData[number - 1].download_url}"
-          class="card-image"
-        />
-        <p>${apiData[number - 1].author}</p>
-      </div>
-    `;
-    resultNode.innerHTML = cardBlock;
+function displayResult(apiData) {
+    resultNode.innerHTML = '';
+    apiData.forEach(item => {
+        resultNode.innerHTML += `
+        <div class="card">
+            <img
+            src="${item.download_url}"
+            class="card-image"
+            />
+            <p>${item.author}</p>
+        </div>`;
+    })
 }
 
 // Вешаем обработчик на кнопку для запроса
@@ -50,3 +50,5 @@ btnNode.addEventListener('click', () => {
         useRequest(`https://picsum.photos/v2/list/?limit=${value}`, displayResult)
     }
 })
+
+// Не совсем верно реализована поставленная задача. Согласно условию нужно вывести на экран все картинки, не только одну последнюю. Выше исправила
